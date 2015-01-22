@@ -636,6 +636,7 @@ namespace TrelloNet.Tests
 				Checklists = new List<Card.Checklist>(),
 				Url = "https://trello.com/c/pD2NljjG/1-welcome-to-trello",
                 ShortUrl = "https://trello.com/c/pD2NljjG",
+                ShortLink = "pD2NljjG",
 				Pos = 32768,
                 DateLastActivity = new DateTime(2012, 03, 24, 22, 48, 26, 596),
 				Badges = new Card.CardBadges
