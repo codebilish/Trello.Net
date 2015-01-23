@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using ExpectedObjects;
 using NUnit.Framework;
+using TrelloNet.Labels;
 
 namespace TrelloNet.Tests
 {
@@ -40,10 +41,10 @@ namespace TrelloNet.Tests
 		[Test]
 		public void WithId_TheOnlyLabeledCard_ContainsTwoLabels()
 		{
-			var expectedLabels = new List<Card.Label>
+			var expectedLabels = new List<Label>
 			{
-			    new Card.Label { Color = Color.Green, Name = "label name" },
-			    new Card.Label { Color = Color.Red, Name = "" }
+			    new Label { Id = "545a6bdb74d650d567cc6c5a", IdBoard = "4f2b8b4d4f2cb9d16d3684c9", Color = Color.Green, Name = "label name", Uses = 1 },
+			    new Label { Id = "545a6bdb74d650d567cc6c5d", IdBoard = "4f2b8b4d4f2cb9d16d3684c9", Color = Color.Red, Name = "", Uses = 1 },
 			}.ToExpectedObject();
 
 			var card = _trelloReadOnly.Cards.WithId("4f2b8b4d4f2cb9d16d36851b");
@@ -631,7 +632,7 @@ namespace TrelloNet.Tests
 				IdList = Constants.WelcomeBoardBasicsListId,
 				IdBoard = Constants.WelcomeBoardId,
 				Due = new DateTime(2015, 01, 01, 09, 00, 00),
-				Labels = new List<Card.Label>(),
+				Labels = new List<Label>(),
 				IdShort = 1,
 				Checklists = new List<Card.Checklist>(),
 				Url = "https://trello.com/c/pD2NljjG/1-welcome-to-trello",

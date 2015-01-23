@@ -161,6 +161,9 @@
     <Compile Include="Internal\AsyncTrello.cs" />
     <Compile Include="Internal\BooleanExtensions.cs" />
     <Compile Include="Internal\TrelloEnumConverter.cs" />
+    <Compile Include="Labels\ILabelId.cs" />
+    <Compile Include="Labels\Label.cs" />
+    <Compile Include="Labels\LabelId.cs" />
     <Compile Include="ListName.cs" />
     <Compile Include="Lists\IAsyncLists.cs" />
     <Compile Include="Lists\Internal\AsyncLists.cs" />

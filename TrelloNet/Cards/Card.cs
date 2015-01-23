@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using TrelloNet.Labels;
 
 namespace TrelloNet
 {
@@ -25,7 +26,7 @@ namespace TrelloNet
         public double Pos { get; set; }
         public DateTime DateLastActivity { get; set; }
         public List<string> IdMembers { get; set; }
-        public IEnumerable<Color> LabelColors { get { return Labels == null ? Enumerable.Empty<Color>() : Labels.Select(l => l.Color); } }
+        public IEnumerable<Color> LabelColors { get { return Labels == null ? Enumerable.Empty<Color>() : Labels.Where(l => l.Color.HasValue).Select(l => l.Color.Value); } }
 
         public string GetCardId()
         {
@@ -35,12 +36,6 @@ namespace TrelloNet
         public override string ToString()
         {
             return Name;
-        }
-
-        public class Label
-        {
-            public Color Color { get; set; }
-            public string Name { get; set; }
         }
 
         public class CardBadges

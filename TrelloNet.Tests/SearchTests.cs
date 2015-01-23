@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ExpectedObjects;
 using NUnit.Framework;
+using TrelloNet.Labels;
 
 namespace TrelloNet.Tests
 {
@@ -92,7 +93,7 @@ namespace TrelloNet.Tests
                 IdList = Constants.WelcomeBoardBasicsListId,
                 IdBoard = Constants.WelcomeBoardId,
                 Due = new DateTime(2015, 01, 01, 09, 00, 00),
-                Labels = new List<Card.Label>(),
+                Labels = new List<Label>(),
                 IdShort = 1,
 				Url = "https://trello.com/c/pD2NljjG/1-welcome-to-trello",
                 ShortUrl = "https://trello.com/c/pD2NljjG",
