@@ -13,6 +13,7 @@ namespace TrelloNet
 		IOrganizations Organizations { get; }
 		INotifications Notifications { get; }
 		ITokens Tokens { get; }
+        ILabels Labels { get; }
 		IAsyncTrello Async { get; }
 		IActions Actions { get; }
 	    IAdvanced Advanced { get; }

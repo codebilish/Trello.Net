@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading;
 using ExpectedObjects;
 using NUnit.Framework;
-using TrelloNet.Labels;
 
 namespace TrelloNet.Tests
 {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-using TrelloNet.Labels;
 
 namespace TrelloNet
 {

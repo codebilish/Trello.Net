@@ -1,4 +1,4 @@
-﻿namespace TrelloNet.Labels
+﻿namespace TrelloNet
 {
     public interface ILabelId
     {

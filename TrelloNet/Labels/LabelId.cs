@@ -1,6 +1,6 @@
 ﻿using TrelloNet.Internal;
 
-namespace TrelloNet.Labels
+namespace TrelloNet
 {
     public class LabelId : ILabelId
     {

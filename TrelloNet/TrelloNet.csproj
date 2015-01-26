@@ -126,6 +126,7 @@
     <Compile Include="Boards\IUpdatableBoard.cs" />
     <Compile Include="Cards\BoardCardFilter.cs" />
     <Compile Include="CardName.cs" />
+    <Compile Include="Cards\BoardLabelFilter.cs" />
     <Compile Include="Cards\BytesAttachment.cs" />
     <Compile Include="Cards\IAttachmentId.cs" />
     <Compile Include="Cards\Internal\CardsAddBytesAttachmentRequest.cs" />
@@ -162,6 +163,9 @@
     <Compile Include="Internal\BooleanExtensions.cs" />
     <Compile Include="Internal\TrelloEnumConverter.cs" />
     <Compile Include="Labels\ILabelId.cs" />
+    <Compile Include="Labels\ILabels.cs" />
+    <Compile Include="Labels\Internal\Labels.cs" />
+    <Compile Include="Labels\Internal\LabelsForBoardRequest.cs" />
     <Compile Include="Labels\Label.cs" />
     <Compile Include="Labels\LabelId.cs" />
     <Compile Include="ListName.cs" />

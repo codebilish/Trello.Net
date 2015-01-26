@@ -24,6 +24,7 @@ namespace TrelloNet
 			Actions = new Actions(_restClient);
 		    Advanced = new Advanced(_restClient);
 		    Webhooks = new Webhooks(_restClient);
+		    Labels = new Labels(_restClient);
 		}
 
 		public IMembers Members { get; private set; }
@@ -34,7 +35,8 @@ namespace TrelloNet
 		public IOrganizations Organizations { get; private set; }
 		public INotifications Notifications { get; private set; }
 		public ITokens Tokens { get; private set; }
-		public IAsyncTrello Async { get; private set; }
+	    public ILabels Labels { get; private set; }
+	    public IAsyncTrello Async { get; private set; }
 		public IActions Actions { get; private set; }
         public IAdvanced Advanced { get; private set; }
         public IWebhooks Webhooks { get; private set; }
