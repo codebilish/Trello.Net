@@ -34,6 +34,15 @@ namespace TrelloNet.Internal
 			request.AddParameter("attachments", "true");
 			request.AddParameter("checklists", "all");
 		}
+
+	    public static void AddCardFieldsParameter(this RestRequest request)
+	    {
+            // include all default fields + shortLink
+            // idMembersVoted and subscribed are the only fields not included
+            request.AddParameter("fields",
+                "badges,checkItemStates,closed,dateLastActivity,desc,descData,due,email,idBoard,idChecklists,idLabels,idList,idMembers,idShort,idAttachmentCover,manualCoverAttachment,labels,name,pos,shortUrl,shortLink,url");
+
+	    }
 		
 		public static void AddRequiredMemberFields(this RestRequest request)	
 		{
