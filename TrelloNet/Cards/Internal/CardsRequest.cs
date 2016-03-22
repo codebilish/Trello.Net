@@ -1,3 +1,4 @@
+using System;
 using RestSharp;
 
 namespace TrelloNet.Internal
@@ -10,6 +11,10 @@ namespace TrelloNet.Internal
 			Guard.NotNull(card, "card");
 			AddParameter("cardId", card.GetCardId(), ParameterType.UrlSegment);
 			this.AddCommonCardParameters();
+		    if (String.IsNullOrEmpty(resource))
+		    {
+		        this.AddCardFieldsParameter();
+		    }
 		}
 
 		public CardsRequest(string cardId, string resource = "", Method method = Method.GET)
