@@ -1,7 +1,7 @@
+# Repo-Specific
 
-#ignore thumbnails created by windows
-Thumbs.db
-#Ignore files build by Visual Studio
+# Visual Studio
+.vs
 *.obj
 *.pdb
 *.user
@@ -18,13 +18,24 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
+*.sdf
 [Bb]in
 [Dd]ebug*/
 *.lib
 *.sbr
 obj/
 [Rr]elease*/
-_ReSharper*/
 [Tt]est[Rr]esult*
+
+# Resharper
+_ReSharper*/
+
+
+# NuGet
 *.nupkg
 packages/
+
+# NuGet Exceptions
+![Nn]u[Gg]et.exe 
+
+

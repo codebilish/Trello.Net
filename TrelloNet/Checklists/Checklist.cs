@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace TrelloNet
@@ -20,7 +21,12 @@ namespace TrelloNet
 		{
 			return Id;
 		}
-	}
+
+        public static explicit operator Checklist<TCheckItem>(Card.Checklist v)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     public class Checklist : Checklist<CheckItem>
     {        
